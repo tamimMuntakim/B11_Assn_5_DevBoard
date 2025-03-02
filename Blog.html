@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevBoard</title>
+    <title>BlogBoard</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="assets/board.png" type="image/x-icon" />
 </head>
 
 <body class="[font-family:'Poppins',sans-serif] bg-[#F4F7FF]">
@@ -24,6 +25,67 @@
                 Home</button>
         </div>
     </nav>
+    <div id="questions" class="w-[90%] mx-auto">
+        <div class="bg-white p-4 rounded-xl text-sm/8 mb-4">
+            <h3 class="text-center font-medium">Question-1: What are the different ways to select an element in the DOM?
+            </h3>
+            <hr class="my-3 border-t-2  border-dashed border-[rgba(55,82,253,0.2)]">
+            <p class="text-justify">
+                There are many ways to select an element in DOM. They are -
+            <ul class="list-disc pl-6">
+                <li>Using document.getElementById() : Selects only one element matching the ID</li>
+                <li>Using document.getElementsByClassName() : Selects all elements matching the class name</li>
+                <li>Using document.querySelector() : Selects first element matching the given CSS selector</li>
+                <li>Using document.querySelectorAll() : Selects all elements matching the given CSS selector</li>
+                <li>Using document.getElementsByTagName() : Selects all elements matching the tag name</li>
+            </ul>
+            </p>
+        </div>
+        <div class="bg-white p-4 rounded-xl text-sm/8 mb-4">
+            <h3 class="text-center font-medium">Question-2: What is the difference between innerHTML, innerText, and
+                textContent ?</h3>
+            <hr class="my-3 border-t-2  border-dashed border-[rgba(55,82,253,0.2)]">
+            <p class="text-justify">
+                innerHTML() : It reads the target element as it is written in the HTML file, including comments<br>
+                innerText() : It reads the target element's only visible or painted text in the browser ignoring all
+                HTML tags, but including outlook styling<br>
+                textContent() : It reads the target element's all texts ignoring all HTML tags and styling, but includes
+                hidden texts</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl text-sm/8 mb-4">
+            <h3 class="text-center font-medium">Question-3: What is event delegation in the DOM?</h3>
+            <hr class="my-3 border-t-2  border-dashed border-[rgba(55,82,253,0.2)]">
+            <p class="text-justify">
+                Event delegation in the DOM means adding a single EventListener to the parent instead of adding
+                EventListeners to each child nodes. Using the Event Bubbling technique, parent's EventListener can
+                correctly capture the child who triggered the event.
+            </p>
+        </div>
+        <div class="bg-white p-4 rounded-xl text-sm/8 mb-4">
+            <h3 class="text-center font-medium">Question-4: What is event bubbling in the DOM?</h3>
+            <hr class="my-3 border-t-2  border-dashed border-[rgba(55,82,253,0.2)]">
+            <p class="">
+                Event bubbling is a technique in the DOM where an event propagates from the target element to its parent
+                elements using capture, target and bubble phases.
+            </p>
+        </div>
+        <div class="bg-white p-4 rounded-xl text-sm/8 mb-4">
+            <h3 class="text-center font-medium">Question-5: How do you create, add, and remove elements using
+                JavaScript?</h3>
+            <hr class="my-3 border-t-2  border-dashed border-[rgba(55,82,253,0.2)]">
+            <p class="text-justify">
+                To create an element we use document.createElement() method. It gives us our desired new HTML
+                element.<br>
+                To add a element we must create a new element using the method mentioned above. Then we select the
+                parent element (of which the new element will be child of) using any preferred method. Then we use
+                parent.appendChild() method to add the new element. Or we can simply select the parent element and
+                modify it's innerHTML to add new elements.
+                <br>
+                To remove an element we must select it first using any preferred method. The we call remove() on itself.
+                Or we can also select the parent element and use removeChild() method.
+            </p>
+        </div>
+    </div>
     <script src="scripts/blog.js"></script>
 </body>
 
